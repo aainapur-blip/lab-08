@@ -25,12 +25,12 @@ class Wizard(val name: String, var mana: Int, var spellPower: Int) {
         }
     }
 
-    // Restores mana without exceeding 100
+    // Skeleton for restoreMana - TDD failing stage
     fun restoreMana(amount: Int) {
-        mana = minOf(100, mana + amount)
+
     }
 
-    // Trains the wizard if sufficient mana is available
+    // Completed train method
     fun train() {
         if (mana >= 5) {
             mana -= 5
