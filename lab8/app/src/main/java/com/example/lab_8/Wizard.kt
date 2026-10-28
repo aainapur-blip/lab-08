@@ -30,11 +30,8 @@ class Wizard(val name: String, var mana: Int, var spellPower: Int) {
         mana = minOf(100, mana + amount)
     }
 
-    // Trains the wizard if enough mana is available
+    // Skeleton for train - TDD failing stage
     fun train() {
-        if (mana >= 5) {
-            mana -= 5
-            spellPower += 1
-        }
+
     }
 }
