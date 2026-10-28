@@ -1,6 +1,8 @@
+
 package com.example.lab_8
 
 class Wizard(val name: String, var mana: Int, var spellPower: Int) {
+
     fun castSpell(spell: String): Int {
         when (spell) {
             "Explosion" -> {
@@ -9,15 +11,27 @@ class Wizard(val name: String, var mana: Int, var spellPower: Int) {
                     return spellPower * 3
                 } else return 0 // not enough mana
             }
+
             "Frostbite" -> {
                 if (mana >= 5) {
                     mana -= 5
                     return spellPower * 2
                 } else return 0 // not enough mana
             }
+
             else -> {
                 return 0 // invalid spell
             }
         }
+    }
+
+    // Restores mana without exceeding 100
+    fun restoreMana(amount: Int) {
+        mana = minOf(100, mana + amount)
+    }
+
+    // Empty method for TDD testing
+    fun train() {
+
     }
 }
